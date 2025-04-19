@@ -35,8 +35,4 @@ async def container_placing(m: int = None, b: int = None):
     except ValueError as e:
         return {"message": str(e)}
     
-    return FileResponse(
-        path=output_path,
-        filename=filename,
-        media_type='text/csv'
-    )
+    return filename
